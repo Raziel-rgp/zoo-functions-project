@@ -14,12 +14,12 @@ function countAnimals(animals) {
     const ani = species.find((especie) => especie.name === animals.specie);
     return ani.residents.length;
   }
-  if (!animals.sex === false) {
+  if (animals.sex) {
     const ani = species.find((especie) => especie.name === animals.specie);
     const aniSexu = ani.residents.filter((secsu) => secsu.sex === animals.sex);
     return aniSexu.length;
   }
 }
-console.log(countAnimals());
+console.log(countAnimals({ specie: 'penguins' }));
 
 module.exports = countAnimals;

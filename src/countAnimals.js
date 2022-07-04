@@ -20,6 +20,6 @@ function countAnimals(animals) {
     return aniSexu;
   }
 }
-console.log(countAnimals({ specie: 'penguins' }));
+console.log(countAnimals());
 
 module.exports = countAnimals;
